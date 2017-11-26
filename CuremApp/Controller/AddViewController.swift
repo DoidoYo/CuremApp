@@ -21,8 +21,6 @@ class AddViewController: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.dataSource = self
         tableView.delegate = self
         
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "ADD", style: .done, target: self, action: #selector(addPressed(_:)))
     }
     

@@ -9,6 +9,8 @@ pod 'SwiftyButton'
 pod 'TextFieldEffects'
 pod 'IQKeyboardManagerSwift'
 
+pod "MIBadgeButton-Swift", :git => 'https://github.com/mustafaibrahim989/MIBadgeButton-Swift.git', :branch => 'master'
+
 
 pod 'Charts'
 
