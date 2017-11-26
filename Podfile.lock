@@ -1,0 +1,23 @@
+PODS:
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
+  - IQKeyboardManagerSwift (5.0.6)
+  - SwiftyButton (0.7.0)
+  - TextFieldEffects (1.4.0)
+
+DEPENDENCIES:
+  - Charts
+  - IQKeyboardManagerSwift
+  - SwiftyButton
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
+  SwiftyButton: f0982849c00ef5a0ed0852202d00201af0943000
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+
+PODFILE CHECKSUM: 9fb60f9a774d9572357fb34ae165916f06b3dabb
+
+COCOAPODS: 1.3.1

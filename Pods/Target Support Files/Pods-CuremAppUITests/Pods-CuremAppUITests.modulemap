@@ -1,0 +1,6 @@
+framework module Pods_CuremAppUITests {
+  umbrella header "Pods-CuremAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

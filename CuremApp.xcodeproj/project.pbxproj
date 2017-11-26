@@ -1,0 +1,827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CF486353ED29184D93341CF /* Pods_CuremApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07326C5DB33BF71A826113F /* Pods_CuremApp.framework */; };
+		81D9A1FEB7FC3B695A6755F7 /* Pods_CuremAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949907D84729C915A606DB63 /* Pods_CuremAppTests.framework */; };
+		BDE744511FCA8A300077BB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744501FCA8A300077BB54 /* ViewController.swift */; };
+		BDE744571FCA8A300077BB54 /* CuremApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDE744551FCA8A300077BB54 /* CuremApp.xcdatamodeld */; };
+		BDE7445C1FCA8A300077BB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE7445A1FCA8A300077BB54 /* LaunchScreen.storyboard */; };
+		BDE744671FCA8A310077BB54 /* CuremAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744661FCA8A310077BB54 /* CuremAppTests.swift */; };
+		BDE744721FCA8A310077BB54 /* CuremAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744711FCA8A310077BB54 /* CuremAppUITests.swift */; };
+		BDE744861FCA8A880077BB54 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744801FCA8A880077BB54 /* AddViewController.swift */; };
+		BDE744871FCA8A880077BB54 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744811FCA8A880077BB54 /* HomeViewController.swift */; };
+		BDE744881FCA8A880077BB54 /* UserTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744821FCA8A880077BB54 /* UserTypeViewController.swift */; };
+		BDE744891FCA8A880077BB54 /* PatientInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744831FCA8A880077BB54 /* PatientInformationViewController.swift */; };
+		BDE7448A1FCA8A880077BB54 /* PatientCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744841FCA8A880077BB54 /* PatientCodeViewController.swift */; };
+		BDE7448B1FCA8A880077BB54 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744851FCA8A880077BB54 /* CreateAccountViewController.swift */; };
+		BDE7448E1FCA8A8E0077BB54 /* HorizontalSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7448D1FCA8A8E0077BB54 /* HorizontalSegue.swift */; };
+		BDE744901FCA8A9B0077BB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE7448F1FCA8A9B0077BB54 /* Assets.xcassets */; };
+		BDE744921FCA8AA50077BB54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE744911FCA8AA40077BB54 /* Main.storyboard */; };
+		BDE744941FCA8AF40077BB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744931FCA8AF40077BB54 /* AppDelegate.swift */; };
+		BF0E8AEA5FDDF198D1E641B3 /* Pods_CuremAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3A2450B2567D46BAF65E8D /* Pods_CuremAppUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDE744631FCA8A310077BB54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDE744431FCA8A300077BB54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDE7444A1FCA8A300077BB54;
+			remoteInfo = CuremApp;
+		};
+		BDE7446E1FCA8A310077BB54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDE744431FCA8A300077BB54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDE7444A1FCA8A300077BB54;
+			remoteInfo = CuremApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19D6E94B1E91C362E7445472 /* Pods-CuremAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuremAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuremAppTests/Pods-CuremAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		272B74926657C086B789D2AA /* Pods-CuremApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuremApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuremApp/Pods-CuremApp.debug.xcconfig"; sourceTree = "<group>"; };
+		39F37015AD095119123EA63F /* Pods-CuremApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuremApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuremApp/Pods-CuremApp.release.xcconfig"; sourceTree = "<group>"; };
+		949907D84729C915A606DB63 /* Pods_CuremAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuremAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3A2450B2567D46BAF65E8D /* Pods_CuremAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuremAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07326C5DB33BF71A826113F /* Pods_CuremApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuremApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE7444B1FCA8A300077BB54 /* CuremApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuremApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE744501FCA8A300077BB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDE744561FCA8A300077BB54 /* CuremApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CuremApp.xcdatamodel; sourceTree = "<group>"; };
+		BDE7445B1FCA8A300077BB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDE7445D1FCA8A300077BB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE744621FCA8A310077BB54 /* CuremAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuremAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE744661FCA8A310077BB54 /* CuremAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuremAppTests.swift; sourceTree = "<group>"; };
+		BDE744681FCA8A310077BB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE7446D1FCA8A310077BB54 /* CuremAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuremAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE744711FCA8A310077BB54 /* CuremAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuremAppUITests.swift; sourceTree = "<group>"; };
+		BDE744731FCA8A310077BB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE744801FCA8A880077BB54 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		BDE744811FCA8A880077BB54 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BDE744821FCA8A880077BB54 /* UserTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTypeViewController.swift; sourceTree = "<group>"; };
+		BDE744831FCA8A880077BB54 /* PatientInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientInformationViewController.swift; sourceTree = "<group>"; };
+		BDE744841FCA8A880077BB54 /* PatientCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientCodeViewController.swift; sourceTree = "<group>"; };
+		BDE744851FCA8A880077BB54 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		BDE7448D1FCA8A8E0077BB54 /* HorizontalSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSegue.swift; sourceTree = "<group>"; };
+		BDE7448F1FCA8A9B0077BB54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDE744911FCA8AA40077BB54 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BDE744931FCA8AF40077BB54 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0B2B649FE17AE528A1976AA /* Pods-CuremAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuremAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuremAppTests/Pods-CuremAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D91107E3CEF6D172D13923CD /* Pods-CuremAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuremAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuremAppUITests/Pods-CuremAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DB6E57B3CD61903787E5DD3D /* Pods-CuremAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuremAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuremAppUITests/Pods-CuremAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDE744481FCA8A300077BB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF486353ED29184D93341CF /* Pods_CuremApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE7445F1FCA8A310077BB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81D9A1FEB7FC3B695A6755F7 /* Pods_CuremAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE7446A1FCA8A310077BB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0E8AEA5FDDF198D1E641B3 /* Pods_CuremAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7321AF2BE5EBB7A6A61FCC55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B07326C5DB33BF71A826113F /* Pods_CuremApp.framework */,
+				949907D84729C915A606DB63 /* Pods_CuremAppTests.framework */,
+				9E3A2450B2567D46BAF65E8D /* Pods_CuremAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDE744421FCA8A300077BB54 = {
+			isa = PBXGroup;
+			children = (
+				BDE7444D1FCA8A300077BB54 /* CuremApp */,
+				BDE744651FCA8A310077BB54 /* CuremAppTests */,
+				BDE744701FCA8A310077BB54 /* CuremAppUITests */,
+				BDE7444C1FCA8A300077BB54 /* Products */,
+				D1914698B34AEB7F531F6292 /* Pods */,
+				7321AF2BE5EBB7A6A61FCC55 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BDE7444C1FCA8A300077BB54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDE7444B1FCA8A300077BB54 /* CuremApp.app */,
+				BDE744621FCA8A310077BB54 /* CuremAppTests.xctest */,
+				BDE7446D1FCA8A310077BB54 /* CuremAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDE7444D1FCA8A300077BB54 /* CuremApp */ = {
+			isa = PBXGroup;
+			children = (
+				BDE7447F1FCA8A880077BB54 /* Controller */,
+				BDE7448C1FCA8A8E0077BB54 /* Custom */,
+				BDE744501FCA8A300077BB54 /* ViewController.swift */,
+				BDE7445A1FCA8A300077BB54 /* LaunchScreen.storyboard */,
+				BDE744931FCA8AF40077BB54 /* AppDelegate.swift */,
+				BDE744911FCA8AA40077BB54 /* Main.storyboard */,
+				BDE7448F1FCA8A9B0077BB54 /* Assets.xcassets */,
+				BDE7445D1FCA8A300077BB54 /* Info.plist */,
+				BDE744551FCA8A300077BB54 /* CuremApp.xcdatamodeld */,
+			);
+			path = CuremApp;
+			sourceTree = "<group>";
+		};
+		BDE744651FCA8A310077BB54 /* CuremAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDE744661FCA8A310077BB54 /* CuremAppTests.swift */,
+				BDE744681FCA8A310077BB54 /* Info.plist */,
+			);
+			path = CuremAppTests;
+			sourceTree = "<group>";
+		};
+		BDE744701FCA8A310077BB54 /* CuremAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDE744711FCA8A310077BB54 /* CuremAppUITests.swift */,
+				BDE744731FCA8A310077BB54 /* Info.plist */,
+			);
+			path = CuremAppUITests;
+			sourceTree = "<group>";
+		};
+		BDE7447F1FCA8A880077BB54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDE744801FCA8A880077BB54 /* AddViewController.swift */,
+				BDE744811FCA8A880077BB54 /* HomeViewController.swift */,
+				BDE744821FCA8A880077BB54 /* UserTypeViewController.swift */,
+				BDE744831FCA8A880077BB54 /* PatientInformationViewController.swift */,
+				BDE744841FCA8A880077BB54 /* PatientCodeViewController.swift */,
+				BDE744851FCA8A880077BB54 /* CreateAccountViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDE7448C1FCA8A8E0077BB54 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				BDE7448D1FCA8A8E0077BB54 /* HorizontalSegue.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		D1914698B34AEB7F531F6292 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				272B74926657C086B789D2AA /* Pods-CuremApp.debug.xcconfig */,
+				39F37015AD095119123EA63F /* Pods-CuremApp.release.xcconfig */,
+				19D6E94B1E91C362E7445472 /* Pods-CuremAppTests.debug.xcconfig */,
+				D0B2B649FE17AE528A1976AA /* Pods-CuremAppTests.release.xcconfig */,
+				DB6E57B3CD61903787E5DD3D /* Pods-CuremAppUITests.debug.xcconfig */,
+				D91107E3CEF6D172D13923CD /* Pods-CuremAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDE7444A1FCA8A300077BB54 /* CuremApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE744761FCA8A310077BB54 /* Build configuration list for PBXNativeTarget "CuremApp" */;
+			buildPhases = (
+				B54BFCF89DBF71BF2426B692 /* [CP] Check Pods Manifest.lock */,
+				BDE744471FCA8A300077BB54 /* Sources */,
+				BDE744481FCA8A300077BB54 /* Frameworks */,
+				BDE744491FCA8A300077BB54 /* Resources */,
+				02F0CA2E509E8C0203C4C7B1 /* [CP] Embed Pods Frameworks */,
+				E9024DCCB6262CB8B078C28A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CuremApp;
+			productName = CuremApp;
+			productReference = BDE7444B1FCA8A300077BB54 /* CuremApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDE744611FCA8A310077BB54 /* CuremAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE744791FCA8A310077BB54 /* Build configuration list for PBXNativeTarget "CuremAppTests" */;
+			buildPhases = (
+				0030443D10541FA57CAC155E /* [CP] Check Pods Manifest.lock */,
+				BDE7445E1FCA8A310077BB54 /* Sources */,
+				BDE7445F1FCA8A310077BB54 /* Frameworks */,
+				BDE744601FCA8A310077BB54 /* Resources */,
+				4B2B588FD19AE55FEBFC2529 /* [CP] Embed Pods Frameworks */,
+				8049D7EAD2E37E0FB57A438B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDE744641FCA8A310077BB54 /* PBXTargetDependency */,
+			);
+			name = CuremAppTests;
+			productName = CuremAppTests;
+			productReference = BDE744621FCA8A310077BB54 /* CuremAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDE7446C1FCA8A310077BB54 /* CuremAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE7447C1FCA8A310077BB54 /* Build configuration list for PBXNativeTarget "CuremAppUITests" */;
+			buildPhases = (
+				9041E3BCA70309C48CC1A633 /* [CP] Check Pods Manifest.lock */,
+				BDE744691FCA8A310077BB54 /* Sources */,
+				BDE7446A1FCA8A310077BB54 /* Frameworks */,
+				BDE7446B1FCA8A310077BB54 /* Resources */,
+				BCDBD25B5A18BB190E409CAA /* [CP] Embed Pods Frameworks */,
+				44DBD2CA717F67B535C1C899 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDE7446F1FCA8A310077BB54 /* PBXTargetDependency */,
+			);
+			name = CuremAppUITests;
+			productName = CuremAppUITests;
+			productReference = BDE7446D1FCA8A310077BB54 /* CuremAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDE744431FCA8A300077BB54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Gabriel Fernandes";
+				TargetAttributes = {
+					BDE7444A1FCA8A300077BB54 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					BDE744611FCA8A310077BB54 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BDE7444A1FCA8A300077BB54;
+					};
+					BDE7446C1FCA8A310077BB54 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BDE7444A1FCA8A300077BB54;
+					};
+				};
+			};
+			buildConfigurationList = BDE744461FCA8A300077BB54 /* Build configuration list for PBXProject "CuremApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDE744421FCA8A300077BB54;
+			productRefGroup = BDE7444C1FCA8A300077BB54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDE7444A1FCA8A300077BB54 /* CuremApp */,
+				BDE744611FCA8A310077BB54 /* CuremAppTests */,
+				BDE7446C1FCA8A310077BB54 /* CuremAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDE744491FCA8A300077BB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE744921FCA8AA50077BB54 /* Main.storyboard in Resources */,
+				BDE7445C1FCA8A300077BB54 /* LaunchScreen.storyboard in Resources */,
+				BDE744901FCA8A9B0077BB54 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE744601FCA8A310077BB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE7446B1FCA8A310077BB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0030443D10541FA57CAC155E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuremAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		02F0CA2E509E8C0203C4C7B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CuremApp/Pods-CuremApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuremApp/Pods-CuremApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44DBD2CA717F67B535C1C899 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuremAppUITests/Pods-CuremAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B2B588FD19AE55FEBFC2529 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuremAppTests/Pods-CuremAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8049D7EAD2E37E0FB57A438B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuremAppTests/Pods-CuremAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9041E3BCA70309C48CC1A633 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuremAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B54BFCF89DBF71BF2426B692 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuremApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCDBD25B5A18BB190E409CAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuremAppUITests/Pods-CuremAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9024DCCB6262CB8B078C28A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuremApp/Pods-CuremApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDE744471FCA8A300077BB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE744891FCA8A880077BB54 /* PatientInformationViewController.swift in Sources */,
+				BDE7448A1FCA8A880077BB54 /* PatientCodeViewController.swift in Sources */,
+				BDE744871FCA8A880077BB54 /* HomeViewController.swift in Sources */,
+				BDE744511FCA8A300077BB54 /* ViewController.swift in Sources */,
+				BDE744571FCA8A300077BB54 /* CuremApp.xcdatamodeld in Sources */,
+				BDE7448E1FCA8A8E0077BB54 /* HorizontalSegue.swift in Sources */,
+				BDE744861FCA8A880077BB54 /* AddViewController.swift in Sources */,
+				BDE7448B1FCA8A880077BB54 /* CreateAccountViewController.swift in Sources */,
+				BDE744941FCA8AF40077BB54 /* AppDelegate.swift in Sources */,
+				BDE744881FCA8A880077BB54 /* UserTypeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE7445E1FCA8A310077BB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE744671FCA8A310077BB54 /* CuremAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE744691FCA8A310077BB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE744721FCA8A310077BB54 /* CuremAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDE744641FCA8A310077BB54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDE7444A1FCA8A300077BB54 /* CuremApp */;
+			targetProxy = BDE744631FCA8A310077BB54 /* PBXContainerItemProxy */;
+		};
+		BDE7446F1FCA8A310077BB54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDE7444A1FCA8A300077BB54 /* CuremApp */;
+			targetProxy = BDE7446E1FCA8A310077BB54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDE7445A1FCA8A300077BB54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDE7445B1FCA8A300077BB54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDE744741FCA8A310077BB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDE744751FCA8A310077BB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDE744771FCA8A310077BB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 272B74926657C086B789D2AA /* Pods-CuremApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EZGAYLTBHH;
+				INFOPLIST_FILE = CuremApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = curem.gabriel.fernandes.CuremApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDE744781FCA8A310077BB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39F37015AD095119123EA63F /* Pods-CuremApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EZGAYLTBHH;
+				INFOPLIST_FILE = CuremApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = curem.gabriel.fernandes.CuremApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDE7447A1FCA8A310077BB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19D6E94B1E91C362E7445472 /* Pods-CuremAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EZGAYLTBHH;
+				INFOPLIST_FILE = CuremAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = curem.gabriel.fernandes.CuremAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CuremApp.app/CuremApp";
+			};
+			name = Debug;
+		};
+		BDE7447B1FCA8A310077BB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0B2B649FE17AE528A1976AA /* Pods-CuremAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EZGAYLTBHH;
+				INFOPLIST_FILE = CuremAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = curem.gabriel.fernandes.CuremAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CuremApp.app/CuremApp";
+			};
+			name = Release;
+		};
+		BDE7447D1FCA8A310077BB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB6E57B3CD61903787E5DD3D /* Pods-CuremAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EZGAYLTBHH;
+				INFOPLIST_FILE = CuremAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = curem.gabriel.fernandes.CuremAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CuremApp;
+			};
+			name = Debug;
+		};
+		BDE7447E1FCA8A310077BB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91107E3CEF6D172D13923CD /* Pods-CuremAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EZGAYLTBHH;
+				INFOPLIST_FILE = CuremAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = curem.gabriel.fernandes.CuremAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CuremApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDE744461FCA8A300077BB54 /* Build configuration list for PBXProject "CuremApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE744741FCA8A310077BB54 /* Debug */,
+				BDE744751FCA8A310077BB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE744761FCA8A310077BB54 /* Build configuration list for PBXNativeTarget "CuremApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE744771FCA8A310077BB54 /* Debug */,
+				BDE744781FCA8A310077BB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE744791FCA8A310077BB54 /* Build configuration list for PBXNativeTarget "CuremAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE7447A1FCA8A310077BB54 /* Debug */,
+				BDE7447B1FCA8A310077BB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE7447C1FCA8A310077BB54 /* Build configuration list for PBXNativeTarget "CuremAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE7447D1FCA8A310077BB54 /* Debug */,
+				BDE7447E1FCA8A310077BB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BDE744551FCA8A300077BB54 /* CuremApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BDE744561FCA8A300077BB54 /* CuremApp.xcdatamodel */,
+			);
+			currentVersion = BDE744561FCA8A300077BB54 /* CuremApp.xcdatamodel */;
+			path = CuremApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BDE744431FCA8A300077BB54 /* Project object */;
+}
