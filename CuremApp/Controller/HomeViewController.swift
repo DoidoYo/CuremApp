@@ -11,13 +11,17 @@ import UIKit
 import Charts
 import MIBadgeButton_Swift
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-//    @IBOutlet weak var chatButton: UIButton!
-//    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var switcher: UISegmentedControl!
     
     @IBOutlet weak var dosageGraph: LineChartView!
     @IBOutlet weak var measurementGraph: LineChartView!
+    
+    @IBOutlet weak var conLabel: UILabel!
+    @IBOutlet weak var meaLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var dosageTime = [1511676491, 1511586305, 1511481600,1511395200, 1511308800, 1511222400, 1511136000]
     var dosageData = [0.5, 0.4, 0.5, 0.6,0.4, 0.5, 0.6]
@@ -44,11 +48,31 @@ class HomeViewController: UIViewController {
         self.navigationItem.rightBarButtonItems![1] = barButton
     }
     
+    @objc func switcherChanged(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            dosageGraph.isHidden = false
+            measurementGraph.isHidden = false
+            conLabel.isHidden = false
+            meaLabel.isHidden = false
+            tableView.isHidden = true
+        } else {
+            dosageGraph.isHidden = true
+            measurementGraph.isHidden = true
+            conLabel.isHidden = true
+            meaLabel.isHidden = true
+            tableView.isHidden = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setChatBadge(1)
+        tableView.delegate = self
+        tableView.dataSource = self
         
+        setChatBadge(1)
+        tableView.isHidden = true
+        switcher.addTarget(self, action: #selector(self.switcherChanged(_:)), for: .valueChanged)
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -178,6 +202,13 @@ class HomeViewController: UIViewController {
         measurementGraph.data = data2
         
         
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: "dataCell")!
+    }
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
     }
     
     @IBAction func unwindToHomeVC(segue:UIStoryboardSegue) { }

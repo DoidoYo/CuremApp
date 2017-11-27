@@ -623,6 +623,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IvB-0c-nPs">
+                                <rect key="frame" x="0.0" y="45" width="375" height="558"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dataCell" id="5hn-Hz-E7V">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5hn-Hz-E7V" id="ubT-mT-EkN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="voltmeter" translatesAutoresizingMaskIntoConstraints="NO" id="mff-cg-zyF">
+                                                    <rect key="frame" x="20" y="5" width="33" height="33.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="33" id="Pcc-TM-qxK"/>
+                                                        <constraint firstAttribute="height" constant="33" id="lb6-Iw-cKX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yB-HT-2ha">
+                                                    <rect key="frame" x="318" y="11" width="42" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lls-1c-Vh6">
+                                                    <rect key="frame" x="83" y="11" width="42" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mff-cg-zyF" secondAttribute="bottom" constant="5" id="6Nb-SO-3h7"/>
+                                                <constraint firstItem="lls-1c-Vh6" firstAttribute="top" secondItem="ubT-mT-EkN" secondAttribute="topMargin" id="F4Q-gm-hkX"/>
+                                                <constraint firstItem="4yB-HT-2ha" firstAttribute="top" secondItem="ubT-mT-EkN" secondAttribute="topMargin" id="Imh-rM-68S"/>
+                                                <constraint firstItem="lls-1c-Vh6" firstAttribute="bottom" secondItem="ubT-mT-EkN" secondAttribute="bottomMargin" id="Ty0-q7-YlC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4yB-HT-2ha" secondAttribute="trailing" id="U0k-zI-Nqf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4yB-HT-2ha" secondAttribute="bottom" id="U6u-gV-q6U"/>
+                                                <constraint firstItem="mff-cg-zyF" firstAttribute="leading" secondItem="ubT-mT-EkN" secondAttribute="leading" constant="20" id="bW3-uR-Ypa"/>
+                                                <constraint firstItem="mff-cg-zyF" firstAttribute="top" secondItem="ubT-mT-EkN" secondAttribute="top" constant="5" id="rOg-vp-Lnl"/>
+                                                <constraint firstItem="lls-1c-Vh6" firstAttribute="leading" secondItem="mff-cg-zyF" secondAttribute="trailing" constant="30" id="x6D-sv-cOe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ha2-0u-gIt"/>
@@ -651,8 +698,12 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="conLabel" destination="Ddg-FY-nH2" id="kxX-ha-rOd"/>
                         <outlet property="dosageGraph" destination="RPI-pE-b4Y" id="O6O-ar-wKb"/>
+                        <outlet property="meaLabel" destination="I0n-OA-XhS" id="vnn-nX-AsH"/>
                         <outlet property="measurementGraph" destination="GnQ-cQ-XJK" id="oEo-jB-T98"/>
+                        <outlet property="switcher" destination="KeR-fo-S67" id="QzS-cw-T1N"/>
+                        <outlet property="tableView" destination="IvB-0c-nPs" id="5f2-Ns-yAc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8e-3c-3E3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -790,5 +841,6 @@
         <image name="chat" width="22" height="22"/>
         <image name="gear" width="22" height="22"/>
         <image name="plus" width="22" height="22"/>
+        <image name="voltmeter" width="32" height="32"/>
     </resources>
 </document>
