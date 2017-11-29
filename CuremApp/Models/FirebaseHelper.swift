@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import CoreData
 
 class FirebaseHelper: NSObject {
     
@@ -16,7 +17,7 @@ class FirebaseHelper: NSObject {
     static var pendingID:String?
     static var userInfo: UserModel?
     static var doctorInfo:UserModel?
-    static var chatId:String?
+    static var savedUser:SavedUser?
     
     static let dbRef = Database.database().reference()
     
@@ -29,9 +30,43 @@ class FirebaseHelper: NSObject {
                 print("ERROR: \(error)")
             } else {
                 self.user = user
+                self.createSavedUser()
             }
             completion(error)
         })
+    }
+    
+    private static func createSavedUser() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            let fetchRequest:NSFetchRequest<SavedUser> = SavedUser.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", self.user.uid)
+            let savedUser = try context.fetch(fetchRequest)
+            
+//            debug stuff
+//            let us = try! context.fetch(SavedUser.fetchRequest())
+//            for u in us {
+//                let u = u as! SavedUser
+//                print(u.id)
+//            }
+            
+            if savedUser.count == 1 {
+                self.savedUser = savedUser[0]
+                print("USER FOUND")
+            } else if savedUser.count > 1 {
+                print("ERROR: more than 1 user found")
+            } else if savedUser.count == 0  {
+                let newSavedUser = SavedUser(context: context)
+                newSavedUser.id = self.user.uid
+                self.savedUser = newSavedUser
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                print("CREATING USER")
+            }
+            
+        } catch {
+            print("Fetching Failed")
+        }
     }
     
     static func logout() {
@@ -63,6 +98,26 @@ class FirebaseHelper: NSObject {
         
     }
     
+    //deleted saved message data
+    private static func deleteData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        var savedMessages: [SavedMessage]!
+        do {
+            let fetchRequest:NSFetchRequest<SavedMessage> = SavedMessage.fetchRequest()
+            let sort = NSSortDescriptor(key: "time", ascending: false)
+            fetchRequest.sortDescriptors = [sort]
+            savedMessages = try context.fetch(fetchRequest)
+            
+            for i in savedMessages {
+                context.delete(i)
+            }
+            
+        } catch {
+            print("Fetching Failed")
+        }
+    }
+    
     static func create(user: CreateUserModel, completion: @escaping (_ err: Error?) -> Void) {
         Auth.auth().createUser(withEmail: user.email, password: user.password, completion: {
             (user, error) in
@@ -85,6 +140,7 @@ class FirebaseHelper: NSObject {
                 //add to users
                 dbRef.child("Physicians").child(pendingPatient!.doc).child(user!.uid).setValue(["chat":chatRef.key, "id":user!.uid])
                 
+                self.createSavedUser()
                 
                 completion(nil)
             }
@@ -96,22 +152,11 @@ class FirebaseHelper: NSObject {
         
         dbRef.child("Patients").child(user.uid).queryLimited(toFirst: 14).observeSingleEvent(of: .value, with: {
             (snapshot) in
-            
-            dbRef.child("Users").child(user.uid).observeSingleEvent(of: .value, with: {
-                (snapshot) in
-                
-                if let snap = snapshot.value as? NSDictionary {
-                    
-                    chatId = snap["chat"] as! String
-                }
-            })
-            
-            
             var measurements: [MeasurementModel] = []
             
             if let snap = snapshot.value as? NSDictionary {
                 for item in snap.allValues {
-                    var item = item as! NSDictionary
+                    let item = item as! NSDictionary
                     
                     measurements.append(try! MeasurementModel.decode(item))
                     
@@ -124,19 +169,30 @@ class FirebaseHelper: NSObject {
         
     }
     
+    static func getUser(completion: @escaping (_ error: Error?) -> Void) {
+        dbRef.child("Users").child(user.uid).observeSingleEvent(of: .value, with: {
+            (snapshot) in
+            if let snap = snapshot.value as? NSDictionary {
+                let userModel = try! UserModel.decode(snap)
+                userInfo = userModel
+                completion(nil)
+            }
+        })
+    }
+    
     static func setMeasurement(_ mea:MeasurementModel) {
         dbRef.child("Patients").child(user.uid).childByAutoId().setValue(try! mea.encodeToDic())
     }
     
     static func sendMsg(_ msg:MessageModel) {
-        let child = dbRef.child("Chat").child(chatId!).childByAutoId()
-        var msg = MessageModel(id: child.key, sender: msg.sender, text: msg.text, time: msg.time)
+        let child = dbRef.child("Chat").child(userInfo!.chat).childByAutoId()
+        let msg = MessageModel(id: child.key, sender: msg.sender, text: msg.text, time: msg.time)
         
         child.setValue(try! msg.encodeToDic())
     }
     
-    static func observeChat(completion: @escaping (_ measurements : MessageModel) -> Void) {
-        dbRef.child("Chat").child(chatId!).observe(.childAdded, with: {
+    static func observeChat(from: Double, completion: @escaping (_ measurements : MessageModel) -> Void) {
+        dbRef.child("Chat").child(userInfo!.chat).queryOrdered(byChild: "time").queryStarting(atValue: from).observe(.childAdded, with: {
             (snapshot) in
             if let snap = snapshot.value as? NSDictionary {
                 completion(try! MessageModel.decode(snap))
@@ -146,7 +202,7 @@ class FirebaseHelper: NSObject {
     
     static func getChatMsg(completion: @escaping (_ measurements : [MessageModel]) -> Void) {
         
-        dbRef.child("Chat").child(chatId!).observeSingleEvent(of: .value, with: {
+        dbRef.child("Chat").child(userInfo!.chat).observeSingleEvent(of: .value, with: {
             (snapshot2) in
             var msgs: [MessageModel] = []
             if let snap2 = snapshot2.value as? NSDictionary {

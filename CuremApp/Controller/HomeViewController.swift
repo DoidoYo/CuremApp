@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Charts
 import MIBadgeButton_Swift
+import CoreData
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -23,20 +24,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var newMsgs = 0;
-    
     var measurements: [MeasurementModel] = []
     var dosageList: [MeasurementModel] = []
     var concentrationList: [MeasurementModel] = []
     
     let LIGHT_GREY = UIColor(red:0.91, green:0.91, blue:0.91, alpha:1.0)
     
+    var chatVC:ChatViewController?
+    
     @objc func showChat(_ sender:Any) {
         setChatBadge(nil)
-        newMsgs = 0
         
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ChatVC")
-        self.navigationController?.show(vc!, sender: self)
+        self.navigationController?.show(chatVC!, sender: self)
     }
     
     func setChatBadge(_ num: Int?) {
@@ -187,6 +186,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+//        self.setChatBadge(nil)
         //data logic
         
         FirebaseHelper.getLatestMeasurements(completion: {
@@ -198,8 +198,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //data logic -- END
     }
+    
     override func viewDidLoad() {
+        //test tk
+//        do {
+//            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//            let fetchRequest:NSFetchRequest<SavedMessage> = SavedMessage.fetchRequest()
+//            let sort = NSSortDescriptor(key: "time", ascending: false)
+//            fetchRequest.sortDescriptors = [sort]
+//            let savedMessages = try context.fetch(fetchRequest)
+//            for i in savedMessages {
+//                context.delete(i)
+//            }
+//        } catch {
+//            print("Fetching Failed")
+//        }
         super.viewDidLoad()
+        
+        //setup chat
+        chatVC = storyboard?.instantiateViewController(withIdentifier: "ChatVC") as? ChatViewController
+        chatVC?.homeVC = self
+        
+        FirebaseHelper.getUser(completion: {
+            (error) in
+            if error == nil {
+                self.chatVC?.initChat()
+            }
+        })
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -207,21 +232,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         setChatBadge(nil)
         tableView.isHidden = true
         switcher.addTarget(self, action: #selector(self.switcherChanged(_:)), for: .valueChanged)
-        
-//        FirebaseHelper.getLatestMeasurements(completion: {
-//            measuremets in
-//            self.measurements = measuremets
-//            self.updateLists()
-//            self.updateGraphs()
-//        })
-//        
-//        FirebaseHelper.observeChat(completion: {
-//            (msg) in
-//            
-//            self.newMsgs += 1
-//            
-//            self.setChatBadge(self.newMsgs)
-//        })
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         

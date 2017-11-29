@@ -6,12 +6,7 @@
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="SavedUser" representedClassName="SavedUser" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="savedMessages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedMessage" syncable="YES"/>
-    </entity>
     <elements>
-        <element name="SavedMessage" positionX="-54" positionY="-9" width="128" height="105"/>
-        <element name="SavedUser" positionX="-36" positionY="36" width="128" height="75"/>
+        <element name="SavedMessage" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

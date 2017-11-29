@@ -29,10 +29,10 @@ class UserTypeViewController: UIViewController {
         
         //for testing
         //for testing
-        let model = LoginModel()
-        model.email = "pat@gmail.com"
-        model.password = "test123"
-        
+//        let model = LoginModel()
+//        model.email = "pat@gmail.com"
+//        model.password = "test123"
+//
 //        FirebaseHelper.login(model, completion: {
 //            error in
 //            if error == nil {
