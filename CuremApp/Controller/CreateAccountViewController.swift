@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class CreateAccountViewController: UIViewController {
     
@@ -37,6 +38,12 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.isHeroEnabled = true
+        self.view.heroID = "codeAnim"
+        for v in self.view.subviews {
+            v.heroModifiers = [.fade, .scale(0)]
+        }
         
     }
     

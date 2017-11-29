@@ -12,6 +12,7 @@ import UIKit
 class PatientInformationViewController: UIViewController {
     
     
+    @IBOutlet weak var navyView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dobLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
@@ -23,6 +24,14 @@ class PatientInformationViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        isHeroEnabled = true
+        self.view.heroID = "codeAnim"
+        navyView.heroModifiers = [.translate(y:50)]
+        
+        for v in self.view.subviews {
+            v.heroModifiers = [.fade, .scale(0)]
+        }
+        
         super.viewDidLoad()
         
         if let patient = FirebaseHelper.pendingPatient {

@@ -34,6 +34,10 @@ class FirebaseHelper: NSObject {
         })
     }
     
+    static func logout() {
+        try! Auth.auth().signOut()
+    }
+    
     static func getPatientFrom(code: String, completion: @escaping (_ err: Error?) -> Void) {
         dbRef.child("PendingPatients").queryOrdered(byChild: "code").queryEqual(toValue: code.lowercased()).observeSingleEvent(of: .value, with: {
             (snapshot) in

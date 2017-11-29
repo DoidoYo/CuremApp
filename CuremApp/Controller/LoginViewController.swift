@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class LoginViewController: UIViewController {
     
@@ -35,6 +36,13 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        isHeroEnabled = true
+        super.view.heroID = "exist"
+        
+        for v in self.view.subviews {
+            v.heroModifiers = [.fade, .scale(0)]
+        }
+        
         super.viewDidLoad()
         
     }
@@ -54,5 +62,7 @@ class LoginViewController: UIViewController {
         border.borderWidth = width
         textView.layer.addSublayer(border)
     }
+    
+    @IBAction func unwindToLoginVC(segue:UIStoryboardSegue) { }
     
 }

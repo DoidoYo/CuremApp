@@ -17,7 +17,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 
-pod 'Gloss', '2.0.0-beta.2'
+pod 'Eureka'
+pod 'Hero'
 
   # Pods for CuremApp
 

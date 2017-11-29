@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class PatientCodeViewController: UIViewController {
     
@@ -32,6 +33,13 @@ class PatientCodeViewController: UIViewController {
     @IBAction func backButtonPress(_ sender: Any) {
     }
     override func viewDidLoad() {
+        isHeroEnabled = true
+        self.view.heroID = "codeAnim"
+        
+        for v in self.view.subviews {
+            v.heroModifiers = [.fade, .scale(0)]
+        }
+        
         super.viewDidLoad()
     }
     

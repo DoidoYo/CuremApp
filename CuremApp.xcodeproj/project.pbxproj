@@ -10,6 +10,7 @@
 		0CF486353ED29184D93341CF /* Pods_CuremApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07326C5DB33BF71A826113F /* Pods_CuremApp.framework */; };
 		81D9A1FEB7FC3B695A6755F7 /* Pods_CuremAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949907D84729C915A606DB63 /* Pods_CuremAppTests.framework */; };
 		BD16D2311FCB2E980034D418 /* DecimalValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D2301FCB2E980034D418 /* DecimalValueFormatter.swift */; };
+		BD234FE81FCF0483009FEDBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234FE71FCF0483009FEDBB /* SettingsViewController.swift */; };
 		BD2D388E1FCC7D6D00D33FC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D388D1FCC7D6D00D33FC1 /* ChatViewController.swift */; };
 		BD2D38A31FCD106C00D33FC1 /* AccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2D38A21FCD106C00D33FC1 /* AccessoryView.xib */; };
 		BD46D7A91FCE23C8009AD51B /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46D7A81FCE23C8009AD51B /* FirebaseHelper.swift */; };
@@ -66,6 +67,7 @@
 		9E3A2450B2567D46BAF65E8D /* Pods_CuremAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuremAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07326C5DB33BF71A826113F /* Pods_CuremApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuremApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD16D2301FCB2E980034D418 /* DecimalValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalValueFormatter.swift; sourceTree = "<group>"; };
+		BD234FE71FCF0483009FEDBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BD2D388D1FCC7D6D00D33FC1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BD2D38A21FCD106C00D33FC1 /* AccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryView.xib; sourceTree = "<group>"; };
 		BD46D7A81FCE23C8009AD51B /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				BDE744841FCA8A880077BB54 /* PatientCodeViewController.swift */,
 				BDE744851FCA8A880077BB54 /* CreateAccountViewController.swift */,
 				BD8A94AD1FCE266E00D8F66B /* LoginViewController.swift */,
+				BD234FE71FCF0483009FEDBB /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,9 +425,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CuremApp/Pods-CuremApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MIBadgeButton-Swift/MIBadgeButton_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
@@ -435,9 +439,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MIBadgeButton_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
@@ -583,6 +588,7 @@
 				BDE744861FCA8A880077BB54 /* AddViewController.swift in Sources */,
 				BDE725861FCE42FD005E7181 /* DecoderExtension.swift in Sources */,
 				BDE7448B1FCA8A880077BB54 /* CreateAccountViewController.swift in Sources */,
+				BD234FE81FCF0483009FEDBB /* SettingsViewController.swift in Sources */,
 				BDE725881FCE4870005E7181 /* CreateUserModel.swift in Sources */,
 				BD2D388E1FCC7D6D00D33FC1 /* ChatViewController.swift in Sources */,
 				BDE7258C1FCE77F7005E7181 /* MessageModel.swift in Sources */,

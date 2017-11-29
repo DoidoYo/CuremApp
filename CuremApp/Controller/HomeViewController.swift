@@ -23,6 +23,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
+    var newMsgs = 0;
+    
     var measurements: [MeasurementModel] = []
     var dosageList: [MeasurementModel] = []
     var concentrationList: [MeasurementModel] = []
@@ -30,6 +32,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let LIGHT_GREY = UIColor(red:0.91, green:0.91, blue:0.91, alpha:1.0)
     
     @objc func showChat(_ sender:Any) {
+        setChatBadge(nil)
+        newMsgs = 0
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "ChatVC")
         self.navigationController?.show(vc!, sender: self)
     }
@@ -193,7 +198,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //data logic -- END
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -203,6 +207,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         setChatBadge(nil)
         tableView.isHidden = true
         switcher.addTarget(self, action: #selector(self.switcherChanged(_:)), for: .valueChanged)
+        
+//        FirebaseHelper.getLatestMeasurements(completion: {
+//            measuremets in
+//            self.measurements = measuremets
+//            self.updateLists()
+//            self.updateGraphs()
+//        })
+//        
+//        FirebaseHelper.observeChat(completion: {
+//            (msg) in
+//            
+//            self.newMsgs += 1
+//            
+//            self.setChatBadge(self.newMsgs)
+//        })
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -263,7 +282,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let val = cell?.viewWithTag(3) as! UILabel
         let time = cell?.viewWithTag(4) as! UILabel
         
-        val.text = "\(mea.measurement)"
+        
         
         let date = Date(timeIntervalSince1970: mea.time / 1000)
         
@@ -275,9 +294,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if mea.type == 0 {
             image.image = #imageLiteral(resourceName: "pill")
             type.text = "Comsumption"
+            val.text = "\(mea.measurement) mg"
         } else {
             image.image = #imageLiteral(resourceName: "voltmeter")
             type.text = "Reading"
+            val.text = "\(mea.measurement) ng/mL"
         }
         
         return cell!

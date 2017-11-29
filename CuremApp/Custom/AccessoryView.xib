@@ -20,13 +20,14 @@
                     <rect key="frame" x="10" y="5" width="295" height="34"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
                 </textField>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96w-aj-0zE">
                     <rect key="frame" x="315" y="0.0" width="50" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="HGl-Tv-prQ"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Send"/>
                 </button>
             </subviews>

@@ -17,8 +17,12 @@ class ChatViewController: UITableViewController {
     
     var messages:[MessageModel] = []
     
+    var parentVC:HomeViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        parentVC = self.navigationController?.viewControllers[0] as! HomeViewController
         
         //load accessory view
         acView = Bundle.main.loadNibNamed("AccessoryView", owner: self, options: nil)?.first as! UIView
@@ -41,9 +45,18 @@ class ChatViewController: UITableViewController {
             self.messages.append(msg)
             let indexPath = IndexPath(row: self.messages.count-1, section: 0)
             self.tableView.insertRows(at: [indexPath], with: .none)
-            self.scroolToBottom(animated: false)
+            self.scroolToBottom(animated: false)            
         })
     }
+    
+//    func updateMsgs(_ msgs: [MessageModel]) {
+//        for item in msgs {
+//            self.messages.append(item)
+//        }
+//        let indexPath = IndexPath(row: self.messages.count-1, section: 0)
+//        self.tableView.insertRows(at: [indexPath], with: .none)
+//        self.scroolToBottom(animated: false)
+//    }
     
     
     override func viewDidAppear(_ animated: Bool) {
