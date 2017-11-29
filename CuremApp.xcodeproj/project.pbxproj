@@ -10,6 +10,15 @@
 		0CF486353ED29184D93341CF /* Pods_CuremApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07326C5DB33BF71A826113F /* Pods_CuremApp.framework */; };
 		81D9A1FEB7FC3B695A6755F7 /* Pods_CuremAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949907D84729C915A606DB63 /* Pods_CuremAppTests.framework */; };
 		BD16D2311FCB2E980034D418 /* DecimalValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D2301FCB2E980034D418 /* DecimalValueFormatter.swift */; };
+		BD2D388E1FCC7D6D00D33FC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D388D1FCC7D6D00D33FC1 /* ChatViewController.swift */; };
+		BD2D38A31FCD106C00D33FC1 /* AccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2D38A21FCD106C00D33FC1 /* AccessoryView.xib */; };
+		BD46D7A91FCE23C8009AD51B /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46D7A81FCE23C8009AD51B /* FirebaseHelper.swift */; };
+		BD46D7AB1FCE2478009AD51B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD46D7AA1FCE2478009AD51B /* GoogleService-Info.plist */; };
+		BD8A94AE1FCE266E00D8F66B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8A94AD1FCE266E00D8F66B /* LoginViewController.swift */; };
+		BD8A94B11FCE342200D8F66B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8A94B01FCE342200D8F66B /* LoginModel.swift */; };
+		BDE725841FCE3C1F005E7181 /* PendingPatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE725831FCE3C1F005E7181 /* PendingPatientModel.swift */; };
+		BDE725861FCE42FD005E7181 /* DecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE725851FCE42FD005E7181 /* DecoderExtension.swift */; };
+		BDE725881FCE4870005E7181 /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE725871FCE4870005E7181 /* CreateUserModel.swift */; };
 		BDE744511FCA8A300077BB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744501FCA8A300077BB54 /* ViewController.swift */; };
 		BDE744571FCA8A300077BB54 /* CuremApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDE744551FCA8A300077BB54 /* CuremApp.xcdatamodeld */; };
 		BDE7445C1FCA8A300077BB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE7445A1FCA8A300077BB54 /* LaunchScreen.storyboard */; };
@@ -54,6 +63,15 @@
 		9E3A2450B2567D46BAF65E8D /* Pods_CuremAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuremAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07326C5DB33BF71A826113F /* Pods_CuremApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuremApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD16D2301FCB2E980034D418 /* DecimalValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalValueFormatter.swift; sourceTree = "<group>"; };
+		BD2D388D1FCC7D6D00D33FC1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BD2D38A21FCD106C00D33FC1 /* AccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryView.xib; sourceTree = "<group>"; };
+		BD46D7A81FCE23C8009AD51B /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		BD46D7AA1FCE2478009AD51B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD8A94AD1FCE266E00D8F66B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BD8A94B01FCE342200D8F66B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		BDE725831FCE3C1F005E7181 /* PendingPatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingPatientModel.swift; sourceTree = "<group>"; };
+		BDE725851FCE42FD005E7181 /* DecoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderExtension.swift; sourceTree = "<group>"; };
+		BDE725871FCE4870005E7181 /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
 		BDE7444B1FCA8A300077BB54 /* CuremApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuremApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE744501FCA8A300077BB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDE744561FCA8A300077BB54 /* CuremApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CuremApp.xcdatamodel; sourceTree = "<group>"; };
@@ -119,6 +137,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD8A94AF1FCE341800D8F66B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD46D7A81FCE23C8009AD51B /* FirebaseHelper.swift */,
+				BD8A94B01FCE342200D8F66B /* LoginModel.swift */,
+				BDE725831FCE3C1F005E7181 /* PendingPatientModel.swift */,
+				BDE725871FCE4870005E7181 /* CreateUserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BDE744421FCA8A300077BB54 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +173,7 @@
 		BDE7444D1FCA8A300077BB54 /* CuremApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD8A94AF1FCE341800D8F66B /* Models */,
 				BDE7447F1FCA8A880077BB54 /* Controller */,
 				BDE7448C1FCA8A8E0077BB54 /* Custom */,
 				BDE744501FCA8A300077BB54 /* ViewController.swift */,
@@ -153,6 +183,7 @@
 				BDE7448F1FCA8A9B0077BB54 /* Assets.xcassets */,
 				BDE7445D1FCA8A300077BB54 /* Info.plist */,
 				BDE744551FCA8A300077BB54 /* CuremApp.xcdatamodeld */,
+				BD46D7AA1FCE2478009AD51B /* GoogleService-Info.plist */,
 			);
 			path = CuremApp;
 			sourceTree = "<group>";
@@ -182,8 +213,10 @@
 				BDE744811FCA8A880077BB54 /* HomeViewController.swift */,
 				BDE744821FCA8A880077BB54 /* UserTypeViewController.swift */,
 				BDE744831FCA8A880077BB54 /* PatientInformationViewController.swift */,
+				BD2D388D1FCC7D6D00D33FC1 /* ChatViewController.swift */,
 				BDE744841FCA8A880077BB54 /* PatientCodeViewController.swift */,
 				BDE744851FCA8A880077BB54 /* CreateAccountViewController.swift */,
+				BD8A94AD1FCE266E00D8F66B /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,9 +224,11 @@
 		BDE7448C1FCA8A8E0077BB54 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BDE725851FCE42FD005E7181 /* DecoderExtension.swift */,
 				BDE7448D1FCA8A8E0077BB54 /* HorizontalSegue.swift */,
 				BDE744951FCA91490077BB54 /* UnixToStringFormatter.swift */,
 				BD16D2301FCB2E980034D418 /* DecimalValueFormatter.swift */,
+				BD2D38A21FCD106C00D33FC1 /* AccessoryView.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -328,6 +363,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE744921FCA8AA50077BB54 /* Main.storyboard in Resources */,
+				BD2D38A31FCD106C00D33FC1 /* AccessoryView.xib in Resources */,
+				BD46D7AB1FCE2478009AD51B /* GoogleService-Info.plist in Resources */,
 				BDE7445C1FCA8A300077BB54 /* LaunchScreen.storyboard in Resources */,
 				BDE744901FCA8A9B0077BB54 /* Assets.xcassets in Resources */,
 			);
@@ -376,18 +413,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CuremApp/Pods-CuremApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MIBadgeButton-Swift/MIBadgeButton_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MIBadgeButton_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,12 +562,19 @@
 				BDE744891FCA8A880077BB54 /* PatientInformationViewController.swift in Sources */,
 				BDE7448A1FCA8A880077BB54 /* PatientCodeViewController.swift in Sources */,
 				BDE744871FCA8A880077BB54 /* HomeViewController.swift in Sources */,
+				BD8A94AE1FCE266E00D8F66B /* LoginViewController.swift in Sources */,
 				BDE744961FCA91490077BB54 /* UnixToStringFormatter.swift in Sources */,
+				BD8A94B11FCE342200D8F66B /* LoginModel.swift in Sources */,
+				BDE725841FCE3C1F005E7181 /* PendingPatientModel.swift in Sources */,
 				BDE744511FCA8A300077BB54 /* ViewController.swift in Sources */,
 				BDE744571FCA8A300077BB54 /* CuremApp.xcdatamodeld in Sources */,
+				BD46D7A91FCE23C8009AD51B /* FirebaseHelper.swift in Sources */,
 				BDE7448E1FCA8A8E0077BB54 /* HorizontalSegue.swift in Sources */,
 				BDE744861FCA8A880077BB54 /* AddViewController.swift in Sources */,
+				BDE725861FCE42FD005E7181 /* DecoderExtension.swift in Sources */,
 				BDE7448B1FCA8A880077BB54 /* CreateAccountViewController.swift in Sources */,
+				BDE725881FCE4870005E7181 /* CreateUserModel.swift in Sources */,
+				BD2D388E1FCC7D6D00D33FC1 /* ChatViewController.swift in Sources */,
 				BDE744941FCA8AF40077BB54 /* AppDelegate.swift in Sources */,
 				BD16D2311FCB2E980034D418 /* DecimalValueFormatter.swift in Sources */,
 				BDE744881FCA8A880077BB54 /* UserTypeViewController.swift in Sources */,
@@ -688,6 +742,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = curem.gabriel.fernandes.CuremApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -704,6 +759,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = curem.gabriel.fernandes.CuremApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

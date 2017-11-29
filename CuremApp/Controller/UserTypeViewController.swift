@@ -26,15 +26,13 @@ class UserTypeViewController: UIViewController {
     }
     
     @objc func newUserTap(_ sender:UIPanGestureRecognizer) {
-        print("new")
-        
-       var newUserVC = storyboard?.instantiateViewController(withIdentifier: "PatientCodeVC")
-        self.show(newUserVC!, sender: self)
-        
+        let newUserVC = storyboard?.instantiateViewController(withIdentifier: "PatientCodeVC")
+        self.showDetailViewController(newUserVC!, sender: self)
     }
     
     @objc func existingUserTap(_ sender:UIPanGestureRecognizer) {
-        print("existing")
+        let newUserVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC")
+        self.showDetailViewController(newUserVC!, sender: self)
     }
     
     

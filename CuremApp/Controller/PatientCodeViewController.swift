@@ -15,7 +15,20 @@ class PatientCodeViewController: UIViewController {
     
     @IBAction func continueButtonPress(_ sender: Any) {
         
+        if !inputText.text!.isEmpty {
+            FirebaseHelper.getPatientFrom(code: inputText.text!, completion: {
+                (error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "PatientInformationVC")
+                    self.showDetailViewController(vc!, sender: self)
+                }
+            })
+        }
+        
     }
+    
     @IBAction func backButtonPress(_ sender: Any) {
     }
     override func viewDidLoad() {
@@ -48,5 +61,7 @@ class PatientCodeViewController: UIViewController {
         
         inputView?.resignFirstResponder()
     }
+    
+    @IBAction func unwindToPatientCodeVC(segue:UIStoryboardSegue) { }
     
 }

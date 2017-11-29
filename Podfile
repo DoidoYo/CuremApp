@@ -11,8 +11,13 @@ pod 'IQKeyboardManagerSwift'
 
 pod "MIBadgeButton-Swift", :git => 'https://github.com/mustafaibrahim989/MIBadgeButton-Swift.git', :branch => 'master'
 
-
 pod 'Charts'
+
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+
+pod 'Gloss', '2.0.0-beta.2'
 
   # Pods for CuremApp
 
