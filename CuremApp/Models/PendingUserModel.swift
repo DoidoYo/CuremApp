@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PendingPatientModel: Codable {
+struct PendingUserModel: Codable {
     var code:String
     var dob:String
     var doc:String

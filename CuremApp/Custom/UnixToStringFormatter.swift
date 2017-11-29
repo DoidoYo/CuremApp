@@ -13,7 +13,7 @@ import Charts
 class UnixToStringFormatter: NSObject, IAxisValueFormatter {
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        let date = Date(timeIntervalSince1970: value)
+        let date = Date(timeIntervalSince1970: value/1000)
         
         let df = DateFormatter()
         df.dateFormat = "MMM dd"

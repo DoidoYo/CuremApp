@@ -15,6 +15,21 @@ class UserTypeViewController: UIViewController {
     @IBOutlet weak var existingUserView: UIView!
     
     override func viewDidLoad() {
+        //for testing
+        //for testing
+        let model = LoginModel()
+        model.email = "pat@gmail.com"
+        model.password = "test123"
+        
+        FirebaseHelper.login(model, completion: {
+            error in
+            if error == nil {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC")
+                self.showDetailViewController(vc!, sender: self)
+            }
+        })
+        
+        
         super.viewDidLoad()
         
         let newTap = UITapGestureRecognizer(target: self, action: #selector(self.newUserTap(_:)))

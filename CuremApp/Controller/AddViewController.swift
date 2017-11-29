@@ -14,6 +14,8 @@ class AddViewController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var tableView: UITableView!
     var dateTF: UITextField?
     var timeTF: UITextField?
+    var valueTF: UITextField?
+    @IBOutlet weak var typeSegment: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,20 @@ class AddViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     @objc func addPressed(_ sender: Any) {
-        print("Pressed")
+        if !valueTF!.text!.isEmpty {
+            let type = typeSegment.selectedSegmentIndex
+            
+            let dateString = "\(timeTF!.text!) \(dateTF!.text!)"
+            let df = DateFormatter()
+            df.dateFormat = "h:mm a MMM dd, yyyy"
+            let date = df.date(from: dateString)
+            let unix = (date?.timeIntervalSince1970)! * 1000
+            
+            let meaModel = MeasurementModel(measurement: Double(valueTF!.text!)!, time: unix, type: type)
+            
+            FirebaseHelper.setMeasurement(meaModel)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,6 +81,7 @@ class AddViewController: UIViewController, UITableViewDataSource, UITableViewDel
             let text = cell?.viewWithTag(1) as! UILabel
             let val = cell?.viewWithTag(2) as! UITextField
             
+            valueTF = val
             text.text = "Value"
             val.text = ""
             val.placeholder = "Your data"

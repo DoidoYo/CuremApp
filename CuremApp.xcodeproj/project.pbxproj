@@ -16,9 +16,12 @@
 		BD46D7AB1FCE2478009AD51B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD46D7AA1FCE2478009AD51B /* GoogleService-Info.plist */; };
 		BD8A94AE1FCE266E00D8F66B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8A94AD1FCE266E00D8F66B /* LoginViewController.swift */; };
 		BD8A94B11FCE342200D8F66B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8A94B01FCE342200D8F66B /* LoginModel.swift */; };
-		BDE725841FCE3C1F005E7181 /* PendingPatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE725831FCE3C1F005E7181 /* PendingPatientModel.swift */; };
+		BDE725841FCE3C1F005E7181 /* PendingUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE725831FCE3C1F005E7181 /* PendingUserModel.swift */; };
 		BDE725861FCE42FD005E7181 /* DecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE725851FCE42FD005E7181 /* DecoderExtension.swift */; };
 		BDE725881FCE4870005E7181 /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE725871FCE4870005E7181 /* CreateUserModel.swift */; };
+		BDE7258A1FCE5FF9005E7181 /* MeasurementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE725891FCE5FF9005E7181 /* MeasurementModel.swift */; };
+		BDE7258C1FCE77F7005E7181 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7258B1FCE77F7005E7181 /* MessageModel.swift */; };
+		BDE7258E1FCE7898005E7181 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7258D1FCE7898005E7181 /* UserModel.swift */; };
 		BDE744511FCA8A300077BB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE744501FCA8A300077BB54 /* ViewController.swift */; };
 		BDE744571FCA8A300077BB54 /* CuremApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDE744551FCA8A300077BB54 /* CuremApp.xcdatamodeld */; };
 		BDE7445C1FCA8A300077BB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE7445A1FCA8A300077BB54 /* LaunchScreen.storyboard */; };
@@ -69,9 +72,12 @@
 		BD46D7AA1FCE2478009AD51B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD8A94AD1FCE266E00D8F66B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BD8A94B01FCE342200D8F66B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		BDE725831FCE3C1F005E7181 /* PendingPatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingPatientModel.swift; sourceTree = "<group>"; };
+		BDE725831FCE3C1F005E7181 /* PendingUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingUserModel.swift; sourceTree = "<group>"; };
 		BDE725851FCE42FD005E7181 /* DecoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderExtension.swift; sourceTree = "<group>"; };
 		BDE725871FCE4870005E7181 /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
+		BDE725891FCE5FF9005E7181 /* MeasurementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementModel.swift; sourceTree = "<group>"; };
+		BDE7258B1FCE77F7005E7181 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		BDE7258D1FCE7898005E7181 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		BDE7444B1FCA8A300077BB54 /* CuremApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuremApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE744501FCA8A300077BB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDE744561FCA8A300077BB54 /* CuremApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CuremApp.xcdatamodel; sourceTree = "<group>"; };
@@ -142,8 +148,11 @@
 			children = (
 				BD46D7A81FCE23C8009AD51B /* FirebaseHelper.swift */,
 				BD8A94B01FCE342200D8F66B /* LoginModel.swift */,
-				BDE725831FCE3C1F005E7181 /* PendingPatientModel.swift */,
 				BDE725871FCE4870005E7181 /* CreateUserModel.swift */,
+				BDE725831FCE3C1F005E7181 /* PendingUserModel.swift */,
+				BDE7258D1FCE7898005E7181 /* UserModel.swift */,
+				BDE725891FCE5FF9005E7181 /* MeasurementModel.swift */,
+				BDE7258B1FCE77F7005E7181 /* MessageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,11 +218,11 @@
 		BDE7447F1FCA8A880077BB54 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BD2D388D1FCC7D6D00D33FC1 /* ChatViewController.swift */,
 				BDE744801FCA8A880077BB54 /* AddViewController.swift */,
 				BDE744811FCA8A880077BB54 /* HomeViewController.swift */,
 				BDE744821FCA8A880077BB54 /* UserTypeViewController.swift */,
 				BDE744831FCA8A880077BB54 /* PatientInformationViewController.swift */,
-				BD2D388D1FCC7D6D00D33FC1 /* ChatViewController.swift */,
 				BDE744841FCA8A880077BB54 /* PatientCodeViewController.swift */,
 				BDE744851FCA8A880077BB54 /* CreateAccountViewController.swift */,
 				BD8A94AD1FCE266E00D8F66B /* LoginViewController.swift */,
@@ -565,16 +574,19 @@
 				BD8A94AE1FCE266E00D8F66B /* LoginViewController.swift in Sources */,
 				BDE744961FCA91490077BB54 /* UnixToStringFormatter.swift in Sources */,
 				BD8A94B11FCE342200D8F66B /* LoginModel.swift in Sources */,
-				BDE725841FCE3C1F005E7181 /* PendingPatientModel.swift in Sources */,
+				BDE725841FCE3C1F005E7181 /* PendingUserModel.swift in Sources */,
 				BDE744511FCA8A300077BB54 /* ViewController.swift in Sources */,
 				BDE744571FCA8A300077BB54 /* CuremApp.xcdatamodeld in Sources */,
 				BD46D7A91FCE23C8009AD51B /* FirebaseHelper.swift in Sources */,
+				BDE7258E1FCE7898005E7181 /* UserModel.swift in Sources */,
 				BDE7448E1FCA8A8E0077BB54 /* HorizontalSegue.swift in Sources */,
 				BDE744861FCA8A880077BB54 /* AddViewController.swift in Sources */,
 				BDE725861FCE42FD005E7181 /* DecoderExtension.swift in Sources */,
 				BDE7448B1FCA8A880077BB54 /* CreateAccountViewController.swift in Sources */,
 				BDE725881FCE4870005E7181 /* CreateUserModel.swift in Sources */,
 				BD2D388E1FCC7D6D00D33FC1 /* ChatViewController.swift in Sources */,
+				BDE7258C1FCE77F7005E7181 /* MessageModel.swift in Sources */,
+				BDE7258A1FCE5FF9005E7181 /* MeasurementModel.swift in Sources */,
 				BDE744941FCA8AF40077BB54 /* AppDelegate.swift in Sources */,
 				BD16D2311FCB2E980034D418 /* DecimalValueFormatter.swift in Sources */,
 				BDE744881FCA8A880077BB54 /* UserTypeViewController.swift in Sources */,

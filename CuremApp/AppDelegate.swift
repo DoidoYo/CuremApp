@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().disabledDistanceHandlingClasses.append(ChatViewController.self)
         
         FirebaseApp.configure()
+        
         return true
     }
 

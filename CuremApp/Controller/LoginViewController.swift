@@ -16,9 +16,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func loginButtonPress(_ sender: Any) {
-        
-        print("LOGGING")
-        
         let loginModel = LoginModel()
         loginModel.email = emailTextField.text
         loginModel.password = passwordTextField.text
