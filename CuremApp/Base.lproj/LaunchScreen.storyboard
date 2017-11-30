@@ -1,25 +1,66 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lnc-Bk-4d4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="hzP-2Z-Mp3">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                <viewController id="Lnc-Bk-4d4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SE0-IM-ySN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jR-yo-8qH">
+                                <rect key="frame" x="0.0" y="343.5" width="375" height="323.5"/>
+                                <color key="backgroundColor" red="0.30588235289999999" green="0.3411764706" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhd-fA-hBG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="343.5"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.84705882349999995" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_cc" translatesAutoresizingMaskIntoConstraints="NO" id="Bjg-iL-Mrz">
+                                <rect key="frame" x="80" y="225.5" width="214" height="214"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="214" id="GWe-Rl-QQB"/>
+                                    <constraint firstAttribute="width" constant="214" id="IwK-2n-k0n"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="zhd-fA-hBG" firstAttribute="height" secondItem="Xps-pU-2Nl" secondAttribute="height" multiplier="0.5" constant="20" id="L02-ly-FHx"/>
+                            <constraint firstItem="Xps-pU-2Nl" firstAttribute="trailing" secondItem="3jR-yo-8qH" secondAttribute="trailing" id="PO1-uZ-TQF"/>
+                            <constraint firstItem="Xps-pU-2Nl" firstAttribute="bottom" secondItem="3jR-yo-8qH" secondAttribute="bottom" id="RAG-2o-lJA"/>
+                            <constraint firstItem="zhd-fA-hBG" firstAttribute="top" secondItem="SE0-IM-ySN" secondAttribute="top" id="U9f-a8-f00"/>
+                            <constraint firstItem="zhd-fA-hBG" firstAttribute="leading" secondItem="Xps-pU-2Nl" secondAttribute="leading" id="Vdr-jb-DMq"/>
+                            <constraint firstItem="3jR-yo-8qH" firstAttribute="leading" secondItem="Xps-pU-2Nl" secondAttribute="leading" id="aY2-Im-o1K"/>
+                            <constraint firstItem="3jR-yo-8qH" firstAttribute="height" secondItem="Xps-pU-2Nl" secondAttribute="height" multiplier="0.5" id="bF8-yW-hND"/>
+                            <constraint firstItem="Bjg-iL-Mrz" firstAttribute="centerX" secondItem="SE0-IM-ySN" secondAttribute="centerX" id="inY-aD-3KO"/>
+                            <constraint firstItem="Xps-pU-2Nl" firstAttribute="trailing" secondItem="zhd-fA-hBG" secondAttribute="trailing" id="mX2-Z4-twI"/>
+                            <constraint firstItem="Bjg-iL-Mrz" firstAttribute="bottom" secondItem="zhd-fA-hBG" secondAttribute="bottom" constant="96" id="wea-w5-51s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xps-pU-2Nl"/>
                     </view>
+                    <connections>
+                        <outlet property="existingUserView" destination="3jR-yo-8qH" id="bXk-Wt-Z5H"/>
+                        <outlet property="newUserView" destination="zhd-fA-hBG" id="sRu-eR-0xH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFu-8U-KaZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-783.20000000000005" y="261.31934032983509"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_cc" width="512" height="512"/>
+    </resources>
 </document>
